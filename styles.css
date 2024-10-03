@@ -1,0 +1,836 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, maroon 0%, #8b0000 100%);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: gold;
+    text-shadow: 2px 2px #660000;
+    font-size: 2.5em;
+    margin: 0;
+    padding-bottom: 10px;
+    display: inline-block;
+    background: linear-gradient(to right, white 40%, lightpink 60%);
+    color: maroon;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 2px solid gold;
+    margin-bottom: 20px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #FFFDD0;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    /* Added padding to fix navigation bar spacing */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: maroon;
+    padding: 12px 25px;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: maroon;
+    color: white;
+    border-radius: 30px;
+    transform: translateY(-3px);
+    border-color: gold;
+}
+
+nav ul li a.active {
+    background-color: #8b0000;
+    color: white;
+    border-radius: 30px;
+    border-color: gold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown Menu */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Adjusted from 100% to fix dropdown position */
+    left: 0;
+    background-color: #FFFDD0;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    width: 100%;
+    margin: 0;
+}
+
+nav ul li ul li a {
+    padding: 10px 15px;
+    text-align: left;
+    color: maroon;
+}
+
+nav ul li ul li a:hover {
+    background-color: maroon;
+    color: white;
+}
+
+/* Slider */
+.slider {
+    max-width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 100px;
+}
+
+.slider img {
+    width: 100%;
+    height: 500px;
+    /* Added height to ensure images fit the slider */
+    object-fit: cover;
+    /* Ensures images cover the slider area */
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slider img.active {
+    display: block;
+}
+
+/* Intro Section */
+.intro-text {
+    text-align: center;
+    margin-top: 20px;
+    padding: 30px 20px;
+    background-color: #F4C2C2;
+    color: maroon;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro-text p {
+    font-size: 18px;
+    color: #8B4513;
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    background-color: #8b0000;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 1.2em;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: gold;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+button {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: maroon;
+}
+
+/* Contact Form */
+.contact-section {
+    text-align: center;
+    padding: 40px;
+}
+
+.contact-details,
+form {
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: maroon;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: maroon;
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.product-item {
+    margin: 15px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    /* Added object-fit to maintain aspect ratio */
+    object-fit: cover;
+}
+
+.product-item p {
+    margin-top: 10px;
+    color: maroon;
+    font-weight: bold;
+}
+
+/* Additional Styles */
+.testimonial {
+    background-color: #FFFDD0;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    color: maroon;
+}
+
+.testimonial p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.faq h3 {
+    color: maroon;
+}
+
+.faq p {
+    margin-bottom: 20px;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.portfolio img {
+    margin: 10px;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    /* Added object-fit to maintain aspect ratio */
+    object-fit: cover;
+}
+
+/* Center Images in Content */
+.main-content img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+* Main Content */ .main-content {
+    padding: 20px;
+}
+
+/* Intro Text */
+.main-content .intro-text {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-content .intro-text h2 {
+    color: maroon;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.main-content .intro-text p {
+    color: #8B4513;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.product-item {
+    margin: 15px;
+    text-align: center;
+    width: 250px;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-item p {
+    margin-top: 10px;
+    color: maroon;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li ul {
+        position: static;
+    }
+
+    .slider {
+        height: 300px;
+        /* Adjusted height for smaller screens */
+        margin-top: 80px;
+        /* Adjusted for mobile header */
+    }
+
+    .slider img {
+        height: 300px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+}/* Ensure images within .intro-text are properly sized and centered */
+.intro-text img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    /* Centers the image */
+}
+/* styles.css */
+
+/* [Existing styles remain unchanged] */
+
+/* Carousel Section */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-item {
+    display: none;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    color: white;
+    background-color: rgba(139, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel-caption h3 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.carousel-caption p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* Carousel Controls */
+.carousel-control {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    user-select: none;
+    background-color: rgba(139, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+/* Featured Products */
+.featured-products {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #FFFDD0;
+}
+
+.featured-products h2 {
+    font-size: 2em;
+    color: maroon;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 15px;
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    color: maroon;
+    font-size: 1.5em;
+    margin: 15px 0 10px 0;
+}
+
+.product-card p {
+    font-size: 1em;
+    color: #8B4513;
+    padding: 0 15px;
+}
+
+.product-card .button {
+    display: inline-block;
+    margin: 15px 0 20px 0;
+    padding: 10px 20px;
+    background-color: maroon;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.product-card .button:hover {
+    background-color: #8b0000;
+}
+
+/* Additional Content */
+.additional-content {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.additional-content h2 {
+    font-size: 2em;
+    color: maroon;
+    margin-bottom: 20px;
+}
+
+.additional-content p {
+    font-size: 1.2em;
+    color: #8B4513;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+/* Adjustments to Existing Styles */
+
+/* Remove margin-top from .slider since it's no longer used */
+.slider {
+    display: none;
+    /* Hide the slider */
+    margin-top: 0;
+}
+
+/* [Rest of your existing styles remain unchanged] */
+/* styles.css */
+
+/* [Your existing styles remain unchanged] */
+
+/* Carousel Section */
+/* Increase the max-width to make the carousel wider */
+.carousel {
+    max-width: 1400px;
+    /* Set to your desired width */
+    margin: 40px auto;
+}
+.carousel-container {
+    position: relative;
+}
+
+.carousel-item {
+    position: relative;
+    outline: none;
+    /* Remove focus outline */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: white;
+    background-color: rgba(139, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 90%;
+}
+
+.carousel-caption h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.carousel-caption p {
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+/* Slick Carousel */
+.slick-slide {
+    margin: 0 10px;
+}
+
+.slick-list {
+    margin: 0 -10px;
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background-color: rgba(139, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background-color: rgba(139, 0, 0, 1);
+}
+
+.slick-dots li button:before {
+    color: maroon;
+    font-size: 12px;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #8b0000;
+}
+/* Featured Products */
+.featured-products {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #FFFDD0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-products h2 {
+    font-size: 2em;
+    color: maroon;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 15px;
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    color: maroon;
+    font-size: 1.5em;
+    margin: 15px 0 10px 0;
+}
+
+.product-card p {
+    font-size: 1em;
+    color: #8B4513;
+    padding: 0 15px;
+}
+
+.product-card .button {
+    display: inline-block;
+    margin: 15px 0 20px 0;
+    padding: 10px 20px;
+    background-color: maroon;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.product-card .button:hover {
+    background-color: #8b0000;
+}
+
+/* Additional Content */
+.additional-content {
+    padding: 40px 20px;
+    text-align: center;
+}
+/* Products Overview */
+.products-overview {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.products-overview h2 {
+    font-size: 2em;
+    color: maroon;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: calc(25% - 30px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    color: maroon;
+    font-size: 1.5em;
+    margin: 15px 0 10px;
+}
+
+.product-card p {
+    flex-grow: 1;
+    font-size: 1em;
+    color: #8B4513;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.product-card .button {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 20px;
+    background-color: maroon;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.product-card .button:hover {
+    background-color: #8b0000;
+}
+
+/* Responsive Design for Products Page */
+@media screen and (max-width: 1024px) {
+    .product-card {
+        width: calc(50% - 30px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product-card {
+        width: 100%;
+    }
+}
+
+.additional-content h2 {
+    font-size: 2em;
+    color: maroon;
+    margin-bottom: 20px;
+}
+
+.additional-content p {
+    font-size: 1.2em;
+    color: #8B4513;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+/* [Rest of your existing styles remain unchanged] */
